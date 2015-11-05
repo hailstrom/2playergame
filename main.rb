@@ -23,7 +23,7 @@ class UI  #this has been instantiated below!
       #above used to be this !@players.any? { |p| p.lives == 0 } ------falseness no run! but instead we made it twue 
       @players.each do |player|
         correct_answer = generate_question(player) ###LOOK AT THIS NOW AND LATER and how it connects elsewhere
-        answer = recieve_answer 
+        answer = receive_answer 
         if compare_q_a(answer,correct_answer)
           player.increase_points #notice that this calls METHOD in player.rb
           puts "You are correct, you have gained #{player.points} points!" #gets LIVES IT LIVES  
@@ -31,11 +31,11 @@ class UI  #this has been instantiated below!
           player.remove_life
           puts "Nope, the answer is #{correct_answer}, you have lost a life, #{player.lives} lives remain"
         end
-        puts "Do you want to see the points?"
-        answer = gets.chomp.downcase
-        if answer == "yes"  #check this later = vs == for truths
-          puts "Player #{player.name}, you have #{player.points} points"
-        end
+        # puts "Do you want to see the points?"
+        # answer = gets.chomp.downcase
+        # if answer == "yes"  #check this later = vs == for truths
+        #   puts "Player #{player.name}, you have #{player.points} points"
+        # end
       end
                
 
