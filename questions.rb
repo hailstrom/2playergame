@@ -30,9 +30,5 @@ def compare_q_a(answer,correct_answer)
   answer.to_i == correct_answer.to_i #comparing answer to q
 end
 
-def gain_points
-
-end
-
 
 
